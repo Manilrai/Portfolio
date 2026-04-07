@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manil Rai | Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#3a6186",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#335b7f",
+                        "surface-container-low": "#f6f3ee",
+                        "on-tertiary-fixed": "#261a00",
+                        "surface-container-high": "#ebe8e3",
+                        "tertiary-fixed": "#ffdf9e",
+                        "secondary-container": "#acd2fd",
+                        "surface-dim": "#dcdad5",
+                        "inverse-surface": "#31302d",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#fabd00",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fcf9f4",
+                        "inverse-primary": "#ffb3ac",
+                        "on-surface": "#1c1c19",
+                        "surface-bright": "#fcf9f4",
+                        "tertiary-container": "#493500",
+                        "on-tertiary-container": "#cd9a00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#930010",
+                        "on-surface-variant": "#42474e",
+                        "on-primary-fixed": "#410003",
+                        "secondary-fixed-dim": "#a4caf4",
+                        "on-secondary-fixed-variant": "#20496d",
+                        "surface-container": "#f0ede8",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "surface-tint": "#ba1a20",
+                        "background": "#fcf9f4",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-background": "#1c1c19",
+                        "on-primary-container": "#ff796f",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#cfe5ff",
+                        "inverse-on-surface": "#f3f0eb",
+                        "primary-container": "#78000b",
+                        "primary": "#4f0004",
+                        "outline": "#72777f",
+                        "surface-variant": "#e5e2dd",
+                        "outline-variant": "#c2c7cf",
+                        "on-secondary-fixed": "#001d34",
+                        "tertiary": "#2f2100",
+                        "primary-fixed": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container relative">
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-stone-50/85 ocean-blur shadow-sm">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <a href="#hero"
+                class="text-2xl font-headline font-bold text-primary italic tracking-tight flex items-center gap-2 hover:opacity-80 transition-opacity">
+                Manil Rai
+                <span class="material-symbols-outlined text-secondary text-xl">sailing</span>
+            </a>
+            <div
+                class="hidden md:flex items-center gap-8 font-label text-sm uppercase tracking-widest font-semibold nav-menu">
+                <a href="#hero"
+                    class="nav-link text-primary border-b-2 border-primary pb-1 transition-colors">Logbook</a>
+                <a href="#about"
+                    class="nav-link text-on-surface-variant border-b-2 border-transparent hover:text-primary pb-1 transition-colors">About</a>
+                <a href="#skills"
+                    class="nav-link text-on-surface-variant border-b-2 border-transparent hover:text-primary pb-1 transition-colors">Skills</a>
+                <a href="#projects"
+                    class="nav-link text-on-surface-variant border-b-2 border-transparent hover:text-primary pb-1 transition-colors">Treasures</a>
+                <a href="#contact"
+                    class="nav-link text-on-surface-variant border-b-2 border-transparent hover:text-primary pb-1 transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="hover:opacity-80 transition-opacity duration-300 flex items-center justify-center w-8 h-8 rounded-full focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-white" aria-label="Toggle Dark Mode">
+                    <span class="material-symbols-outlined text-primary dark-btn-icon" id="theme-icon">dark_mode</span>
+                </button>
+                <a href="https://github.com/Manilrai" target="_blank"
+                    class="hover:opacity-80 transition-opacity duration-300">
+                    <span class="material-symbols-outlined text-primary nav-github-icon" data-icon="terminal">terminal</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 overflow-hidden relative">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center px-8 max-w-7xl mx-auto pb-32">
+            <div class="grid md:grid-cols-12 gap-12 items-center w-full z-10 fade-in-section">
+                <div class="md:col-span-7 space-y-8">
+                    <p
+                        class="font-label text-secondary uppercase tracking-widest text-sm font-bold flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">swords</span>
+                        Aspiring Web Developer
+                    </p>
+                    <h1 class="font-headline text-6xl md:text-8xl text-primary leading-none -tracking-[0.02em]">
+                        Hi, I’m Manil Rai — <br>
+                        <span class="italic text-secondary">BSc (Hons) Computing Student</span>
+                    </h1>
+                    <p class="max-w-xl text-lg text-on-surface-variant leading-relaxed">
+
+                        Passionate about frontend development, UI/UX design, and building creative web projects.
+                        Exploring new technologies and bringing a touch of One Piece-inspired imagination into every
+                        project I create.
+                    </p>
+                    <div class="flex gap-4 items-center">
+                        <a href="#projects"
+                            class="editorial-gradient text-on-primary px-8 py-4 rounded-md font-label uppercase tracking-widest text-xs flex items-center gap-2 hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                            View Treasures
+                            <span class="material-symbols-outlined text-sm">explore</span>
+                        </a>
+                        <a href="#contact"
+                            class="bg-surface-container-high px-8 py-4 rounded-md font-label uppercase tracking-widest text-xs hover:bg-surface-container-highest transition-colors flex items-center gap-2">
+                            Contact Logbook
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 relative hidden md:block floating">
+                    <!-- Asymmetric Illustration Placement -->
+                    <div
+                        class="relative w-full aspect-square bg-surface-container-low rounded-full flex items-center justify-center">
+                        <div
+                            class="absolute -top-12 -right-12 p-8 bg-surface-container-lowest rounded-xl shadow-xl shadow-on-surface/5 rotate-6 floating-slow">
+                            <span class="material-symbols-outlined text-secondary text-5xl">architecture</span>
+                        </div>
+                        <div
+                            class="absolute bottom-4 -left-8 p-6 bg-surface-container-lowest rounded-xl shadow-xl shadow-on-surface/5 -rotate-12 floating">
+                            <span class="material-symbols-outlined text-primary text-5xl">directions_boat</span>
+                        </div>
+                        <img src="assets/wanted.jpg" alt="Manil Rai Wanted Poster"
+                            class="w-3/4 h-auto object-cover rounded-sm shadow-2xl border-4 border-[#e2d5c3] rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated Subtle Waves Background Elements -->
+            <div class="waves-container">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-32 bg-surface-container-low transition-colors duration-500">
+            <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center fade-in-section">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-secondary/5 rounded-2xl group-hover:bg-secondary/10 transition-colors duration-500">
+                    </div>
+                    <img src="assets/wanted.jpg" alt="Manil Rai Wanted Poster"
+                        class="relative rounded-sm w-full aspect-[3/4] object-cover transition-all duration-700 shadow-2xl border-8 border-surface-container-highest hover:-translate-y-2 hover:rotate-1" />
+                </div>
+
+                <div class="space-y-6">
+                    <h2 class="font-headline text-5xl text-on-surface font-bold italic leading-tight">Navigating the
+                        <br>Evolving Tech Horizon.
+                    </h2>
+                    <div class="h-1 w-24 bg-primary mb-8"></div>
+                    <p class="text-on-surface-variant text-lg leading-relaxed">
+                        I’m a 2nd-year BSc (Hons) Computing student at Itahari International College, affiliated
+                        with London Metropolitan University. I’m passionate about frontend development, UI/UX design,
+                        and building creative, hands-on projects.
+                    </p>
+                    <p class="text-on-surface-variant text-lg leading-relaxed">
+                        I love exploring new technologies and applying them to real-world solutions, whether it’s
+                        developing a full-stack web application, designing a seamless user interface, or experimenting
+                        with interactive animations.
+                    </p>
+                    <p class="text-on-surface-variant text-lg leading-relaxed">
+                        As a big fan of One Piece, I enjoy bringing creativity and a touch of imagination into my work,
+                        while maintaining professional, clean, and efficient code. I aspire to grow as a software
+                        developer, contribute to exciting projects, and build a strong portfolio that reflects both my
+                        technical skills and personal style.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 pt-8">
+                        <div>
+                            <span class="font-headline text-3xl text-secondary block font-bold">BSc</span>
+                            <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Computing
+                                Student</span>
+                        </div>
+                        <div>
+                            <span class="font-headline text-3xl text-secondary block font-bold">∞</span>
+                            <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Love for
+                                Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-32 px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-24 fade-in-section">
+                <p class="font-label text-secondary uppercase tracking-widest text-sm mb-4">Arsenal & Expertise</p>
+                <h2 class="font-headline text-5xl text-primary italic font-bold">The Mariner's Toolkit</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 fade-in-section">
+                <!-- Group: Programming & Logic -->
+                <div class="space-y-12">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary text-3xl">code</span>
+                            <h3 class="font-label text-sm uppercase font-bold tracking-widest">Programming</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div
+                                    class="flex justify-between font-label text-xs mb-2 text-on-surface-variant font-bold">
+                                    <span>Python</span>
+                                </div>
+                                <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim skill-bar-fill transition-all duration-[1.5s] ease-out"
+                                        data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="flex justify-between font-label text-xs mb-2 text-on-surface-variant font-bold">
+                                    <span>Java</span>
+                                </div>
+                                <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim skill-bar-fill transition-all duration-[1.5s] ease-out"
+                                        data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="flex justify-between font-label text-xs mb-2 text-on-surface-variant font-bold">
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim skill-bar-fill transition-all duration-[1.5s] ease-out"
+                                        data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group: Interface Craft -->
+                <div class="space-y-12">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary text-3xl">layers</span>
+                            <h3 class="font-label text-sm uppercase font-bold tracking-widest">Frontend & UI</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div
+                                    class="flex justify-between font-label text-xs mb-2 text-on-surface-variant font-bold">
+                                    <span>HTML & CSS</span>
+                                </div>
+                                <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim skill-bar-fill transition-all duration-[1.5s] ease-out flex items-center justify-end pr-2 text-[10px] text-on-primary font-bold"
+                                        data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="flex justify-between font-label text-xs mb-2 text-on-surface-variant font-bold">
+                                    <span>React</span>
+                                </div>
+                                <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim skill-bar-fill transition-all duration-[1.5s] ease-out"
+                                        data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="flex justify-between font-label text-xs mb-2 text-on-surface-variant font-bold">
+                                    <span>Figma</span>
+                                </div>
+                                <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim skill-bar-fill transition-all duration-[1.5s] ease-out"
+                                        data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group: The Engine Room -->
+                <div class="space-y-12">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary text-3xl">database</span>
+                            <h3 class="font-label text-sm uppercase font-bold tracking-widest">Backend & Tools</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div
+                                    class="flex justify-between font-label text-xs mb-2 text-on-surface-variant font-bold">
+                                    <span>Node.js / Express</span>
+                                </div>
+                                <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim skill-bar-fill transition-all duration-[1.5s] ease-out"
+                                        data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="flex justify-between font-label text-xs mb-2 text-on-surface-variant font-bold">
+                                    <span>MySQL & MongoDB</span>
+                                </div>
+                                <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim skill-bar-fill transition-all duration-[1.5s] ease-out"
+                                        data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="flex justify-between font-label text-xs mb-2 text-on-surface-variant font-bold">
+                                    <span>Git & GitHub / VS Code</span>
+                                </div>
+                                <div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim skill-bar-fill transition-all duration-[1.5s] ease-out"
+                                        data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-32 bg-surface-container-low transition-colors duration-500">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4 fade-in-section">
+                    <div>
+                        <p class="font-label text-secondary uppercase tracking-widest text-sm mb-4">Expeditions</p>
+                        <h2 class="font-headline text-5xl text-on-surface font-bold italic">Uncovered Treasures</h2>
+                    </div>
+                    <div class="text-on-surface-variant font-serif italic text-lg max-w-sm">
+                        "Every line of code is a step towards the Grand Line of computing excellence."
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 fade-in-section">
+                    <!-- Project 1: Travel-Buddy -->
+                    <div
+                        class="group relative bg-surface-container-lowest overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl rounded-lg">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="assets/travel-buddy.png" alt="Travel-Buddy Project Dashboard"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="font-headline text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">
+                                    Travel-Buddy</h3>
+                                <a href="https://github.com/Manilrai/Travel-Buddy" target="_blank"
+                                    class="text-secondary hover:text-primary transition-colors"
+                                    aria-label="Github Repo">
+                                    <span class="material-symbols-outlined text-3xl">open_in_new</span>
+                                </a>
+                            </div>
+                            <p class="text-on-surface-variant">Full-stack travel platform for seamless trip planning and
+                                discovery. Built with a robust architecture to handle real-time data.</p>
+                            <div class="flex flex-wrap gap-2 pt-4">
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/30 text-on-surface-variant">React</span>
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/30 text-on-surface-variant">Node.js</span>
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/30 text-on-surface-variant">Express</span>
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/30 text-on-surface-variant">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-5 transition-opacity">
+                            <span class="material-symbols-outlined text-8xl text-on-surface">sailing</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: CareerLinkPro -->
+                    <div
+                        class="group relative bg-surface-container-lowest overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl rounded-lg">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="assets/careerlinkpro.png" alt="CareerLinkPro Portal Design"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="font-headline text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">
+                                    CareerLinkPro</h3>
+                                <a href="https://github.com/Manilrai/CareerLinkPro" target="_blank"
+                                    class="text-secondary hover:text-primary transition-colors"
+                                    aria-label="Github Repo">
+                                    <span class="material-symbols-outlined text-3xl">open_in_new</span>
+                                </a>
+                            </div>
+                            <p class="text-on-surface-variant">Specialized internship portal facilitating connections
+                                between aspiring students and professional opportunities.</p>
+                            <div class="flex flex-wrap gap-2 pt-4">
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/30 text-on-surface-variant">HTML/CSS</span>
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/30 text-on-surface-variant">JavaScript</span>
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/30 text-on-surface-variant">Java
+                                    Servlets / JSP</span>
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/30 text-on-surface-variant">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-5 transition-opacity">
+                            <span class="material-symbols-outlined text-8xl text-on-surface">work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 px-8 max-w-7xl mx-auto overflow-hidden">
+            <div class="grid md:grid-cols-2 gap-16 items-start fade-in-section">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <p
+                        class="font-label text-secondary uppercase tracking-widest text-sm font-bold flex items-center gap-2">
+                        <span class="material-symbols-outlined text-secondary text-xl">rss_feed</span>
+                        Send a Signal
+                    </p>
+                    <h2 class="font-headline text-6xl text-primary font-bold italic leading-none">Drop an Anchor.</h2>
+                    <p class="text-on-surface-variant text-lg leading-relaxed max-w-md">Looking for a collaboration or
+                        just want to chat about UI/UX? Reach out through any of these frequencies to my den den mushi.
+                    </p>
+
+                    <div class="space-y-6 pt-4">
+                        <a href="mailto:raeemanil123@gmail.com"
+                            class="flex items-center gap-6 group hover:-translate-y-1 transition-transform w-[max-content]">
+                            <div
+                                class="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all group-hover:border-transparent">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <span
+                                class="font-label text-sm uppercase tracking-widest font-bold text-on-surface group-hover:text-primary transition-colors">raeemanil123@gmail.com</span>
+                        </a>
+
+                        <a href="tel:9829366235"
+                            class="flex items-center gap-6 group hover:-translate-y-1 transition-transform w-[max-content]">
+                            <div
+                                class="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all group-hover:border-transparent">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <span
+                                class="font-label text-sm uppercase tracking-widest font-bold text-on-surface group-hover:text-primary transition-colors">9829366235</span>
+                        </a>
+
+                        <div class="flex flex-wrap gap-4 pt-8">
+                            <a href="https://github.com/Manilrai" target="_blank"
+                                class="px-6 h-12 rounded-full border border-outline-variant/30 flex items-center gap-3 hover:bg-surface-container-highest hover:border-outline-variant hover:scale-105 transition-all group"
+                                aria-label="GitHub">
+                                <span class="material-symbols-outlined text-[1.2rem] text-on-surface-variant group-hover:text-primary transition-colors">terminal</span>
+                                <span class="font-label text-xs uppercase tracking-widest font-bold text-on-surface-variant group-hover:text-primary transition-colors">GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/manil-rai-b4823636b/" target="_blank"
+                                class="px-6 h-12 rounded-full border border-outline-variant/30 flex items-center gap-3 hover:bg-surface-container-highest hover:border-outline-variant hover:scale-105 transition-all group"
+                                aria-label="LinkedIn">
+                                <span class="material-symbols-outlined text-[1.2rem] text-on-surface-variant group-hover:text-primary transition-colors">work</span>
+                                <span class="font-label text-xs uppercase tracking-widest font-bold text-on-surface-variant group-hover:text-primary transition-colors">LinkedIn</span>
+                            </a>
+                            <a href="https://www.instagram.com/manileyyyy/?hl=en" target="_blank"
+                                class="px-6 h-12 rounded-full border border-outline-variant/30 flex items-center gap-3 hover:bg-surface-container-highest hover:border-outline-variant hover:scale-105 transition-all group"
+                                aria-label="Instagram">
+                                <span class="material-symbols-outlined text-[1.2rem] text-on-surface-variant group-hover:text-primary transition-colors">photo_camera</span>
+                                <span class="font-label text-xs uppercase tracking-widest font-bold text-on-surface-variant group-hover:text-primary transition-colors">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div
+                    class="bg-surface-container-low p-8 md:p-12 rounded-2xl border border-outline-variant/10 shadow-lg relative">
+                    <!-- Subtle compass in background -->
+                    <span
+                        class="material-symbols-outlined absolute -top-8 -right-8 text-9xl opacity-[0.03] text-on-surface pointer-events-none rotate-45">explore</span>
+
+                    <form id="contact-form" class="space-y-6 relative z-10">
+                        <div class="space-y-2">
+                            <label for="name"
+                                class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold">Crewmate
+                                Name</label>
+                            <input type="text" id="name" required
+                                class="w-full bg-surface border-none focus:ring-1 focus:ring-primary rounded-md p-4 placeholder:text-outline-variant text-sm transition-shadow"
+                                placeholder="Monkey D. Luffy">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email"
+                                class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold">Transmission
+                                Address</label>
+                            <input type="email" id="email" required
+                                class="w-full bg-surface border-none focus:ring-1 focus:ring-primary rounded-md p-4 placeholder:text-outline-variant text-sm transition-shadow"
+                                placeholder="captain@thousand-sunny.com">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="message"
+                                class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold">Signal
+                                Message</label>
+                            <textarea id="message" required rows="4"
+                                class="w-full bg-surface border-none focus:ring-1 focus:ring-primary rounded-md p-4 placeholder:text-outline-variant text-sm transition-shadow resize-none"
+                                placeholder="I want to build something legendary..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full editorial-gradient text-on-primary py-4 rounded-md font-label uppercase tracking-widest text-xs font-bold hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/20 transition-all flex justify-center items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">send</span>
+                            Transmit Signal
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-12 px-8 bg-surface-container-highest border-t border-outline-variant/10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+            <div class="text-xl font-headline italic font-bold text-secondary flex items-center gap-2">
+                Manil Rai Portfolio
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                    <path
+                        d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1v4a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-4h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z">
+                    </path>
+                    <path d="M8 8h8"></path>
+                    <path d="M8 12h8"></path>
+                </svg>
+            </div>
+
+            <div class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold text-center">
+                © <span id="currentYear"></span> Nautical Era | Designed with passion
+            </div>
+
+            <div class="flex gap-8">
+                <a href="https://github.com/Manilrai" target="_blank"
+                    class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold hover:text-primary transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/manil-rai-b4823636b/" target="_blank"
+                    class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold hover:text-primary transition-colors">LinkedIn</a>
+                <a href="https://www.instagram.com/manileyyyy/?hl=en" target="_blank"
+                    class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold hover:text-primary transition-colors">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

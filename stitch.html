@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manil Rai | Digital Logbook</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#3a6186",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#335b7f",
+                        "surface-container-low": "#f6f3ee",
+                        "on-tertiary-fixed": "#261a00",
+                        "surface-container-high": "#ebe8e3",
+                        "tertiary-fixed": "#ffdf9e",
+                        "secondary-container": "#acd2fd",
+                        "surface-dim": "#dcdad5",
+                        "inverse-surface": "#31302d",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#fabd00",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fcf9f4",
+                        "inverse-primary": "#ffb3ac",
+                        "on-surface": "#1c1c19",
+                        "surface-bright": "#fcf9f4",
+                        "tertiary-container": "#493500",
+                        "on-tertiary-container": "#cd9a00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#930010",
+                        "on-surface-variant": "#42474e",
+                        "on-primary-fixed": "#410003",
+                        "secondary-fixed-dim": "#a4caf4",
+                        "on-secondary-fixed-variant": "#20496d",
+                        "surface-container": "#f0ede8",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "surface-tint": "#ba1a20",
+                        "background": "#fcf9f4",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-background": "#1c1c19",
+                        "on-primary-container": "#ff796f",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#cfe5ff",
+                        "inverse-on-surface": "#f3f0eb",
+                        "primary-container": "#78000b",
+                        "primary": "#4f0004",
+                        "outline": "#72777f",
+                        "surface-variant": "#e5e2dd",
+                        "outline-variant": "#c2c7cf",
+                        "on-secondary-fixed": "#001d34",
+                        "tertiary": "#2f2100",
+                        "primary-fixed": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #4f0004 0%, #78000b 100%);
+        }
+        .ocean-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/85 dark:bg-slate-900/85 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-serif font-bold text-red-900 dark:text-red-500 font-serif italic tracking-tight">Manil Rai</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-red-800 dark:text-red-400 font-bold border-b-2 border-red-800 dark:border-red-400 pb-1" href="#hero">Logbook</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-red-700 dark:hover:text-red-300 transition-colors" href="#projects">Treasures</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-red-700 dark:hover:text-red-300 transition-colors" href="#skills">Skills</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-red-700 dark:hover:text-red-300 transition-colors" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined text-red-900 dark:text-red-500" data-icon="explore">explore</span>
+</button>
+<img alt="Manil Rai Portrait" class="w-8 h-8 rounded-full border border-outline-variant/20" data-alt="minimalist professional portrait of a young man with a neutral background in high-end editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBirz5nyNfXlPR_d6d4xgHQSOr3HBI01-uEgHN4GqZzGrvMjtguU5dxzxE3P-sz7es-1A_ZBGLzXoOtT2JVyU_amfA98HuF_Aq-DhjWFdWtqYyrf9D_D4XWwhafqGLPQkq0doQCgQYFUkhbNxk3gwi4zYa4H9arVH9tPmMUrcPw0dXjDr4wbluU3JLz-jojvnTCgs3TSt5dd_rUuWbH7eJWYiKkZA1dVZCXHsee00vjR_jqDLGvkm4sUK61Wj_9WbF_hf0bgl8PAQB-"/>
+</div>
+</div>
+</nav>
+<main class="pt-24 overflow-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-8 max-w-7xl mx-auto" id="hero">
+<div class="grid md:grid-cols-12 gap-12 items-center w-full">
+<div class="md:col-span-7 space-y-8 z-10">
+<p class="font-label text-secondary uppercase tracking-widest text-sm font-bold">The Great Computing Era</p>
+<h1 class="font-headline text-6xl md:text-8xl text-primary leading-none -tracking-[0.02em]">
+                        Hi, I’m Manil Rai — <br/>
+<span class="italic text-secondary">A Digital Cartographer.</span>
+</h1>
+<p class="max-w-xl text-lg text-on-surface-variant leading-relaxed">
+                        BSc Computing student passionate about UI/UX design and frontend development. I build interfaces that navigate the vast ocean of data with elegance and precision.
+                    </p>
+<div class="flex gap-4 items-center">
+<a class="editorial-gradient text-on-primary px-8 py-4 rounded-md font-label uppercase tracking-widest text-xs flex items-center gap-2 hover:translate-y-0.5 transition-transform" href="#projects">
+                            View Treasures
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="bg-surface-container-high px-8 py-4 rounded-md font-label uppercase tracking-widest text-xs hover:bg-surface-container-highest transition-colors" href="#contact">
+                            Contact Logbook
+                        </a>
+</div>
+</div>
+<div class="md:col-span-5 relative hidden md:block">
+<!-- Asymmetric Illustration Placement -->
+<div class="relative w-full aspect-square bg-surface-container-low rounded-full flex items-center justify-center">
+<div class="absolute -top-12 -right-12 p-8 bg-surface-container-lowest rounded-xl shadow-xl shadow-on-surface/5 rotate-6">
+<span class="material-symbols-outlined text-secondary text-5xl" data-icon="architecture">architecture</span>
+</div>
+<div class="absolute bottom-4 -left-8 p-6 bg-surface-container-lowest rounded-xl shadow-xl shadow-on-surface/5 -rotate-12">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="sailing" data-weight="fill" style="font-variation-settings: 'FILL' 1;">sailing</span>
+</div>
+<img alt="Creative portrait" class="w-4/5 h-4/5 object-cover rounded-full mix-blend-multiply opacity-80" data-alt="artistic silhouette of a young developer looking towards the horizon with a subtle world map overlaid on a parchment texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcs1mpL-EVrO6waC_lewJeTgNrYLdkjM9VzPlMfE2rTTQYpAQ7XoNrvTaFYiH3KFtrHvqs7tG_uban9gLTyAUoeE-V_LBT9T1MDFTV6mHbh5QeEkbt5QmXeUO0aexekPRfLX-nLF4R2iwAfI-xa-c_D5o_2Gy5l4qkM7DJhgLfWnkl_bRztSray33l5Eb4UTkItyEJzn6EFKrsvq6gWpsKdbvSCshstWWljj41jwAYNJd0UxrVS60gWP-U_iYebQLZ3v6rpA7o7mHF"/>
+</div>
+</div>
+</div>
+<!-- Animated Subtle Background Elements -->
+<div class="absolute bottom-0 left-0 w-full h-32 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-secondary/10 via-transparent to-transparent pointer-events-none"></div>
+</section>
+<!-- About Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/5 rounded-2xl group-hover:bg-secondary/10 transition-colors duration-500"></div>
+<img alt="Bio" class="relative rounded-xl w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="overhead view of a workspace with a laptop, notebooks, a compass, and modern digital devices on a light oak desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkFGsrWEsZOU_24ukZaAio3H7p2owjphtmISmoxvunvJ9fp1IBeIpBXl_Gse2pE0lG6O0WEUTqJNk7meEMgRjsQd5czgRs-P7AJxMBCaPoi0c1ouaF9nQ4Hq1_BvY7tm7yitNccL-rU-SV8cDOrjwFFcY33Ye3EM51lKzcQTOCFQpvlC7EwH6-VvLMjU2eI_-rE7i4BnVF_5heeo4tr6m13iQqByye0l3_f1Dp89FfVJFl_kR7SAs94x0eX3yavmueN1cum0m71vQo"/>
+</div>
+<div class="space-y-6">
+<h2 class="font-headline text-5xl text-on-surface font-bold italic leading-tight">Navigating the <br/>Evolving Tech Horizon.</h2>
+<div class="h-1 w-24 bg-primary mb-8"></div>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        My journey began with a curiosity for how systems communicate. Today, as a BSc Computing student, I specialize in bridging the gap between complex logic and human-centric design.
+                    </p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        I am fueled by the constant pursuit of learning—treating every new framework or design pattern as a new island to explore in the vast archipelago of technology.
+                    </p>
+<div class="grid grid-cols-2 gap-8 pt-8">
+<div>
+<span class="font-headline text-3xl text-secondary block font-bold">100+</span>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Commits Logged</span>
+</div>
+<div>
+<span class="font-headline text-3xl text-secondary block font-bold">BSc</span>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Computing Student</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto" id="skills">
+<div class="text-center mb-24">
+<p class="font-label text-secondary uppercase tracking-widest text-sm mb-4">Arsenal &amp; Expertise</p>
+<h2 class="font-headline text-5xl text-primary italic font-bold">The Mariner's Toolkit</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<!-- Group: Programming & Frontend -->
+<div class="space-y-12">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="code">code</span>
+<h3 class="font-label text-sm uppercase font-bold tracking-widest">Programming &amp; Logic</h3>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between font-label text-xs mb-2"><span>Python</span><span>85%</span></div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[85%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label text-xs mb-2"><span>Java</span><span>75%</span></div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[75%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label text-xs mb-2"><span>JavaScript</span><span>90%</span></div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[90%] transition-all duration-1000"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Group: Frontend & Frameworks -->
+<div class="space-y-12">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="layers">layers</span>
+<h3 class="font-label text-sm uppercase font-bold tracking-widest">Interface Craft</h3>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between font-label text-xs mb-2"><span>React &amp; State</span><span>80%</span></div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[80%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label text-xs mb-2"><span>Tailwind CSS</span><span>95%</span></div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[95%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label text-xs mb-2"><span>Responsive Layouts</span><span>90%</span></div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[90%] transition-all duration-1000"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Group: Backend & Tools -->
+<div class="space-y-12">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="terminal">terminal</span>
+<h3 class="font-label text-sm uppercase font-bold tracking-widest">The Engine Room</h3>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between font-label text-xs mb-2"><span>Node.js / Express</span><span>70%</span></div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[70%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label text-xs mb-2"><span>Databases (MySQL/Mongo)</span><span>75%</span></div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[75%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label text-xs mb-2"><span>Figma &amp; Prototyping</span><span>85%</span></div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[85%] transition-all duration-1000"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-32 bg-surface-container-low" id="projects">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<p class="font-label text-secondary uppercase tracking-widest text-sm mb-4">Expeditions</p>
+<h2 class="font-headline text-5xl text-on-surface font-bold italic">Uncovered Treasures</h2>
+</div>
+<div class="text-on-surface-variant font-serif italic text-lg max-w-sm">
+                        "Every line of code is a step towards the Grand Line of computing excellence."
+                    </div>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<!-- Project 1: Travel-Buddy -->
+<div class="group relative bg-surface-container-lowest overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-on-surface/5">
+<div class="aspect-video overflow-hidden">
+<img alt="Travel-Buddy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="vibrant interactive dashboard of a travel application showing maps, flight routes, and tropical destination photos with clean glassmorphism UI elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNv6E6DWyQvzyqy-OAJ0Grw2xCIeyTzeTHsveQuOANbuw1m-VzqXeIu1laU-rxZwbtN-hiJ9qNeHVkM2Uufy6zTtLyouHlSnCAMM_hwhAdzCeDvZ-Efr2rYwpFjgUbr5jN2LJ3HlFYpjxeE83ytoi0RkOc5njkADQvqPY7lkmQk-bVvWuHNWQKHUqnnkCdfjWWPNAT6YSDQ__ueMsEpQ6EhOziNKMs9omFGxvmUuXUZI1tvNHAj5KcR0r-pC4A7jmbrhiGVuyOLimz"/>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-3xl font-bold">Travel-Buddy</h3>
+<a class="text-secondary hover:text-primary transition-colors" href="https://github.com/Manilrai/Travel-Buddy" target="_blank">
+<span class="material-symbols-outlined text-3xl" data-icon="rocket_launch">rocket_launch</span>
+</a>
+</div>
+<p class="text-on-surface-variant">Full-stack travel platform for seamless trip planning and discovery. Built with a robust architecture to handle real-time data.</p>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full">React</span>
+<span class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full">Node.js</span>
+<span class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full">MySQL</span>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="navigation">navigation</span>
+</div>
+</div>
+<!-- Project 2: CareerLinkPro -->
+<div class="group relative bg-surface-container-lowest overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-on-surface/5">
+<div class="aspect-video overflow-hidden">
+<img alt="CareerLinkPro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="professional corporate portal design with job listings, user profile analytics, and sleek minimalist forms in blue and white tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARKJdenAXPbrg5KyHEhbuipGQtKPocVt1Ub7Wz86lJtTf5YRd1lWy0lb16Wi6xzpMD-4VAFMvPeWm5y-aBjkgu8tqbNQzmwgnTCm9Kw-evHuF_Z4ey9UNfN8RFzdGgwwXrpUw1_q6hfpJvn-EM8Bo8Kd9UMJCi2qCRHXoyPUPtbgK1eE7GsySIMoHTz58OY8nPHESgU9EDZP0jL-mMmjDPiymXV13D9yyjAelthFc0-09ObX3mQJd-W-vL2dR_O8fU2xgsFWJjWaod"/>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-3xl font-bold">CareerLinkPro</h3>
+<a class="text-secondary hover:text-primary transition-colors" href="https://github.com/Manilrai/CareerLinkPro" target="_blank">
+<span class="material-symbols-outlined text-3xl" data-icon="work">work</span>
+</a>
+</div>
+<p class="text-on-surface-variant">Specialized internship portal facilitating connections between aspiring students and professional opportunities.</p>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full">Java Servlets</span>
+<span class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full">MySQL</span>
+<span class="font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-surface-container-high rounded-full">Vanilla JS</span>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="person_search">person_search</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto" id="contact">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<p class="font-label text-secondary uppercase tracking-widest text-sm">Send a Signal</p>
+<h2 class="font-headline text-6xl text-primary font-bold italic leading-none">Drop an Anchor.</h2>
+<p class="text-on-surface-variant text-lg">Looking for a collaboration or just want to chat about UI/UX? Reach out through any of these frequencies.</p>
+<div class="space-y-6">
+<a class="flex items-center gap-6 group" href="mailto:raeemanil123@gmail.com">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<span class="font-label text-sm uppercase tracking-widest font-bold">raeemanil123@gmail.com</span>
+</a>
+<a class="flex items-center gap-6 group" href="tel:9829366235">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<span class="font-label text-sm uppercase tracking-widest font-bold">9829366235</span>
+</a>
+<div class="flex gap-4 pt-4">
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-high transition-colors" href="https://github.com/Manilrai" target="_blank">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person_apron">person_apron</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-12 rounded-2xl border border-outline-variant/10">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest">Name</label>
+<input class="w-full bg-surface border-none focus:ring-1 focus:ring-primary rounded-md p-4 placeholder:text-outline-variant text-sm" placeholder="Monkey D. Luffy" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest">Email Address</label>
+<input class="w-full bg-surface border-none focus:ring-1 focus:ring-primary rounded-md p-4 placeholder:text-outline-variant text-sm" placeholder="captain@thousand-sunny.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest">Message</label>
+<textarea class="w-full bg-surface border-none focus:ring-1 focus:ring-primary rounded-md p-4 placeholder:text-outline-variant text-sm" placeholder="I want to build something legendary..." rows="4"></textarea>
+</div>
+<button class="w-full editorial-gradient text-on-primary py-4 rounded-md font-label uppercase tracking-widest text-xs font-bold hover:translate-y-0.5 transition-transform shadow-lg shadow-primary/20" type="submit">
+                            Transmit Message
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-stone-100 dark:bg-slate-950 tonal-shift-top border-t-0 bg-stone-200/50 dark:bg-slate-900/50">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-serif italic text-blue-900 dark:text-blue-400">Manil Rai Digital Logbook</div>
+<div class="font-sans text-xs uppercase tracking-widest text-slate-500">© 1524 Nautical Era | Manil Rai Digital Logbook</div>
+<div class="flex gap-8">
+<a class="text-slate-500 dark:text-slate-500 hover:text-red-800 dark:hover:text-red-400 transition-all hover:scale-105 transition-transform duration-200" href="https://github.com/Manilrai">GitHub</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-red-800 dark:hover:text-red-400 transition-all hover:scale-105 transition-transform duration-200" href="#">LinkedIn</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-red-800 dark:hover:text-red-400 transition-all hover:scale-105 transition-transform duration-200" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

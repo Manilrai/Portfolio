@@ -1,0 +1,163 @@
+/* Custom fonts loaded via HTML */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.editorial-gradient {
+    background: linear-gradient(135deg, #4f0004 0%, #78000b 100%);
+}
+
+.ocean-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Animations & Transitions */
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Subtitle floating for anime feel */
+.floating-slow {
+    animation: float 8s ease-in-out infinite;
+}
+
+/* --- Animated Waves Background --- */
+.waves-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.waves-container svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100%;
+}
+
+/* Wave animations */
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+    fill: rgba(58, 97, 134, 0.15);
+    /* secondary */
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+    fill: rgba(172, 210, 253, 0.3);
+    /* secondary-container */
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+    fill: rgba(79, 0, 4, 0.05);
+    /* primary */
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+    fill: rgba(58, 97, 134, 0.2);
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* Scroll Fade In Animation */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    visibility: hidden;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+/* --- Dark Mode Overrides --- */
+.dark body,
+.dark .bg-surface {
+    background-color: #121212 !important;
+}
+.dark .bg-stone-50\/85 {
+    background-color: rgba(18, 18, 18, 0.85) !important;
+}
+.dark .text-primary,
+.dark .hover\:text-primary:hover {
+    color: #f43f5e !important; /* rose-500 */
+}
+.dark .text-secondary {
+    color: #60a5fa !important; /* blue-400 */
+}
+.dark .text-on-surface {
+    color: #f3f4f6 !important; /* gray-100 */
+}
+.dark .text-on-surface-variant {
+    color: #9ca3af !important; /* gray-400 */
+}
+.dark .bg-surface-container,
+.dark .bg-surface-container-low {
+    background-color: #1f2937 !important; /* gray-800 */
+}
+.dark .bg-surface-container-high {
+    background-color: #374151 !important; /* gray-700 */
+}
+.dark .bg-surface-container-highest {
+    background-color: #111827 !important; /* gray-900 */
+}
+.dark .border-outline-variant\/10 {
+    border-color: rgba(255,255,255,0.1) !important;
+}
+.dark .border-outline-variant\/30 {
+    border-color: rgba(255,255,255,0.3) !important;
+}
+.dark .border-outline-variant\/50 {
+    border-color: rgba(255,255,255,0.5) !important;
+}
+.dark .waves .parallax > use:nth-child(1) { fill: rgba(96, 165, 250, 0.15) !important; }
+.dark .waves .parallax > use:nth-child(2) { fill: rgba(96, 165, 250, 0.3) !important; }
+.dark .waves .parallax > use:nth-child(3) { fill: rgba(244, 63, 94, 0.05) !important; }
+.dark .waves .parallax > use:nth-child(4) { fill: rgba(96, 165, 250, 0.2) !important; }
+.dark .dark-btn-icon, .dark .nav-github-icon {
+    color: #e5e7eb !important;
+}
