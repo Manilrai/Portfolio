@@ -48,4 +48,4 @@ Looking for a collaboration or just want to chat about UI/UX? Drop an anchor and
 
 ---
 *Every line of code is a step towards the Grand Line of computing excellence.*
-
+Manil Rai
